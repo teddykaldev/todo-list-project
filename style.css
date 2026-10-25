@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    background-color: #001a3a;
+}
+
+.projectContainer{
+ margin: 0;
+ background-color: #001a3a;
+ color: white;
+}
+#checkMark{
+    width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2875ff, #5145ff, #762bff);
+  box-shadow: 0 0 15px rgba(50, 90, 255, 0.4);
+  position: relative
+}
+#checkMark i{
+      font-size: 35px;
+  color: white;
+  background: #050914;
+  border-radius: 12px;
+  padding: 5px;
+  text-shadow: 0 0 5px white;
+}
+
+
+/* .image >img{
+    width: 100px;
+    height: 100px;
+} */

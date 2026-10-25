@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List Application</title>
+      <link
+    rel="stylesheet"
+    href="./Icons/css/all.min.css"
+>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="projectContainer">
+        <section class="headerContainer">
+
+            <div class="mobileandDesktopHeader">
+            <span id="checkMark"><i class="fa-solid fa-check"></i></span>
+            <h1>To-Do <span id="list">List</span> </h1>
+            <p>Plan + Organize + Be Productive </p>
+            </div>
+
+            <div id="mobilemenu" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="desktopHeaderContainer">
+                <div class="noteContiner">
+                   <h1>Good to see you,<span id="username">!</span></h1>
+                   <p>keep going,you're doing great!</p> 
+                </div>
+                <div class="DarkandNightMoodContainer">
+             <button id="lightmood">
+              <i class="fa-solid fa-sun"></i>
+             </button>
+             <button id="darkmood">
+                <i class="fa-solid fa-moon"></i>
+             </button>
+             <button id="userfirstletter">t</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sidenavs">
+            <nav id="mobileMenu" class="sidemenu">
+             <button id="closebtn" aria-label="close button">
+                <i class="fa-solid fa-xmark"></i>
+             </button>
+             <div class="menu-item" >
+                <i class="fa-solid fa-house"></i>
+                <span>Add Task</span>
+             </div>
+             <div class="menu-item" ">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Task Count</span>
+             </div>
+              <div class="menu-item" ">
+                <i class="fa-solid fa-filter"></i>
+                <span>Filter Tasks</span>
+             </div>
+              <div class="menu-item" ">
+                <i class="fa-solid fa-trash-can"></i>
+                <span>Clear Completed</span>
+             </div>
+            </nav>
+
+            <div class="card">
+                <i class="fa-solid fa-seedling plant"></i>
+                <p>Small steps</p>
+                <p>make big progress</p>
+                <i class="fa-solid fa-heart heart"></i>
+            </div>
+        </section>
+
+        <section class="AlltaskContainer">
+            <div class="addTaskContainer">
+                <input type="text" placeholder="e.g Study JavaScript" class="input">
+                <button id="addbtn">+ Add</button>
+            </div>
+
+            <div class="taskConterContainer">
+                <span><i class="fa-solid fa-chart-simple"></i></span>
+                <h2>Task Summary</h2>
+                <p>Track your progress at a glance!</p>
+                <div class="TotalContainer">
+                    <span><i class="fa-solid fa-list-ul"></i></span>
+                    <p>Total Tasks</p>
+                    <p id="totalcount"></p>
+                </div>
+                
+                <div class="CompletedContainer">
+                    <span><i class="fa-solid fa-check"></i></span>
+                    <p>Completed Tasks</p>
+                    <p id="completedcount"></p>
+                </div>
+
+                <div class="RemainingContainer">
+                    <span><i class="fa-regular fa-clock"></i></span>
+                    <p>Remaining Tasks</p>
+                    <p id="remainingcount"></p>
+                </div>
+            </div>
+
+            <div class="FilterTaskContainer">
+                <div class="filterTask">
+                    <span><i class="fa-solid fa-filter"></i></span>
+                    <h2>Filter Tasks</h2>
+                    <p>Choose a filter to view your tasks.</p>
+                </div>
+                <div><span><i class="fa-solid fa-list-ul"></i></span>
+                <h3>All Tasks</h3>
+                </div>
+                <div><span><i class="fa-solid fa-check"></i></span>
+                <h3>Completed</h3>
+                </div>
+                <div><span><i class="fa-regular fa-clock"></i></span>
+                <h3>pending</h3>
+                </div>
+                <div><span> <i class="fa-solid fa-trash-can"></i></span>
+                <h3>clear Completed</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="TaskContainer">
+         <div id="taskSetContainer">
+
+         </div>
+         <div id="noTaskNote">
+             <!-- <div class="image"><img src="./images/clipboard.jpg" alt=""></div> -->
+             <h2>No tasks yet!</h2>
+             <p>Add your first task to get started.</p>
+         </div>
+        </section>
+
+    </div>
+</body>
+</html>
