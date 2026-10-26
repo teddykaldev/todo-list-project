@@ -1,16 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
-    background-color: #001a3a;
+    background-color: #00050d;
+    width: 100%;
 }
 
 .projectContainer{
  margin: 0;
- background-color: #001a3a;
+ width: 100%;
+ min-height: 100vh;
+ background-color: #00050d;
  color: white;
+ font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+.mobileandDesktopHeader{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+
+}
+#mobileHeader{
+    width: 100%;
+    background-color:#001a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+}
+#todoContainer {
+    min-width: 0;
+}
+#todoContainer h1{
+    margin-top: 0;
+    margin-bottom: clamp(22px,6vw,30px);
+    font-weight: 500;
+    white-space: nowrap;
+}
+#todoContainer p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: clamp(10px,3vw,14px);
+    color: #b8c7e8;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+#plus{
+    font-size: 12px;
+    padding: 0 3px;
+}
+#list{
+    color: #3015e8;
+    font-weight: 600;
 }
 #checkMark{
-    width: 70px;
-  height: 70px;
+    width: 55px;
+  height: 55px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,13 +76,350 @@ body{
       font-size: 35px;
   color: white;
   background: #050914;
-  border-radius: 12px;
+  border-radius: 80%;
   padding: 5px;
   text-shadow: 0 0 5px white;
 }
+#mobilemenu{
+    background-color: #0047ab;
+    padding: 8px 10px;
+    border-radius: 7px;
+    margin: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.desktopHeaderContainer{
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.noteContiner{
+    margin: 0;
+}
+.noteContiner h1{
+     margin-top: 5px;
+     margin-bottom: 0;
+      font-size: clamp(23px,6vw,30px);
+    font-weight: 500;
+}
+.noteContiner p{
+    margin-top: 0;
+    margin-bottom: 9px;
+    color: #b8c7e8;
+     font-size: 14px;
+    line-height: 1.6;
+}
+.DarkandNightMoodContainer{
+    display: none;
+}
+.sidenavs{
+    display: none;
+}
+.AlltaskContainer{
+    width: 100%;
+    min-width: 0;
+    padding: 0 10px;
+}
+.addTaskContainer{
+    width: 100%;
+    min-width: 0;
+    background-color: #030b1c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 12px;
+}
+.input{
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    background-color: #082654;
+    border: 1px solid #164e91;
+    border-radius: 8px;
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #e2e8f0;
+    outline: none;
+    
+}
+.input::placeholder{
+    color: #94a3b8;
+    font-weight: 500;
+}
+#addbtn{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 4px;
+flex-shrink: 0;
+background-color: #4f46e5;
+color: #ffffff;
+border: none;
+border-radius: 8px;
+padding: 12px;
+font-size: 14px;
+font-weight: 600;
+cursor: pointer;
+}
+.TotalContainer span{
+display: none;
+}
+.completedContainer span{
+    display: none;
+}
+.RemainingContainer span{
+    display: none;
+}
+.taskConterContainer{
+    width: 100%;
+    min-width: 0;
+    margin-top: 10px;
+    background-color: #030b1c;
+    border: 1px solid #164e91;
+    padding: 12px;
+    border-radius: 12px;
+    
+}
+#taskSummary{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
 
-
-/* .image >img{
-    width: 100px;
+}
+#taskSummaryIcon{
+    background-color: #10b981;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+#taskSummary h2{
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: clamp(21px,5,5vw,30px);
+    font-weight: 500;
+}
+#taskSummary p{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #b8c7e8;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.taskCounterContainer2{
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content:space-between;
+    gap: 8px;
+    margin-top: 15px;
+}
+.TotalContainer{
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #082654;
+    border:1px solid #164e91 ;
+    padding: 12px 14px;
+    border-radius:16px ;
+    text-align: center;
+}
+.completedContainer{
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #064e3b;
+    border:1px solid #10b981 ;
+    padding: 12px 14px;
+    border-radius:16px ;
+    text-align: center;
+}
+.RemainingContainer{
+    display: flex;
+  
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #78350f;
+    border:1px solid #f59e0b ;
+    padding: 12px 14px;
+    border-radius:16px ;
+    text-align: center;
+}
+.FilterTaskContainer{
+    background-color: #030b1c;
+    border: 1px solid #164e91;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+#Filtericon{
+    background-color: #4f46e5;
+    padding: 12px 12px;
+    border-radius: 10px;
+}
+.filterTask{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#filterNoteContainer h2{
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+#filterNoteContainer p{
+    margin-top: 0;
+    color: #b8c7e8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+#filtertasksContainer{
+     display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+#alltask{
+    display: none;
+}
+#Filterall{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+    background-color: #082654;
+     border:1px solid #164e91 ;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+#FilterCompleted{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+    background-color: #082654;
+     border:1px solid #164e91 ;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+#FilterRemaining{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+    background-color: #082654;
+     border:1px solid #164e91 ;
+    padding: 5px 10px;
+    border-radius: 12px; 
+}
+#FilterTrash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #e11d48;
+    border:none;
+    border-radius: 12px;
+    margin: 10px 0 0 0;
+}
+.TaskContainer{
+    background-color: #000000;
+    border-radius:12px ;
+    border:1px solid #164e91 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.image >img{
+   max-width: 100%;
     height: 100px;
-} */
+}
+.image{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#notaskmessage{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#notaskmessage h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.MobileFooter{
+    margin: 0;
+    background-color:#001a3a; ;
+    border-radius: 0 0 25px 25px;
+}
+#mobileFooterContainer{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+    
+}
+#mobileFooterContainer div{
+    margin-top: 10px;
+}
+#mobileHome span{
+    margin-bottom: 0;
+    display:flex ;
+    justify-content: center;
+    
+}
+#mobileHome p{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+#mobileStat span{
+    margin-bottom: 0;
+    display:flex ;
+    justify-content: center;
+    
+}
+#mobileStat p{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+#mobileFilter span{
+    margin-bottom: 0;
+    display:flex ;
+    justify-content: center;
+}
+#mobileFilter p{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+#mobileClear span{
+    margin-bottom: 0;
+    display:flex ;
+    justify-content: center
+}
+#mobileClear p{
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
