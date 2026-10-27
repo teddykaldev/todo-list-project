@@ -1,193 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple To-Do List Application</title>
-      <link
-    rel="stylesheet"
-    href="./Icons/css/all.min.css"
->
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+
+    <link rel="stylesheet" href="./Icons/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <div class="projectContainer">
-        <section class="headerContainer">
-          <div id="mobileHeader"> 
-               <div class="mobileandDesktopHeader">
-                   <div>
-                      <span id="checkMark"><i class="fa-solid fa-check"></i></span>
-                   </div>
-                   <div id="todoContainer">
-                       <h1>To-Do <span id="list">List</span> </h1>
-                       <p>Plan <span id="plus">+</span>  Organize <span id="plus">+</span>  Be Productive </p> 
-                   </div>
-                 
-                </div>
-              <div id="mobilemenu" aria-label="Open menu">
-                  <i class="fa-solid fa-bars"></i>
-              </div>  
-          </div>
-        
-            <div class="desktopHeaderContainer">
-                <div class="noteContiner">
-                   <h1>Good to see you,<span id="username">!</span></h1>
-                   <p>keep going,you're doing great!</p> 
-                </div>
-                <div class="DarkandNightMoodContainer">
-                    <button id="lightmood">
-                        <i class="fa-solid fa-sun"></i>
-                    </button>
-                    <button id="darkmood">
-                      <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <button id="userfirstletter">t</button>
-              </div>
+      <section class="Side-bar-Container">
+        <div id="mobileHeader">
+          <div class="mobileandDesktopHeader">
+            <div>
+              <span id="checkMark">
+                <i class="fa-solid fa-check"></i>
+              </span>
             </div>
-        </section>
+
+            <div id="todoContainer">
+              <h1>To-Do <span id="list">List</span></h1>
+              <p>
+                Plan <span class="plus">+</span> Organize
+                <span class="plus">+</span>
+                Be Productive
+              </p>
+            </div>
+          </div>
+
+          <div id="mobilemenu" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
 
         <section class="sidenavs">
-            <nav id="mobileMenu" class="sidemenu">
-             <button id="closebtn" aria-label="close button">
+          <nav id="mobileMenu" class="sidemenu">
+            <button id="closebtn" aria-label="close button">
                 <i class="fa-solid fa-xmark"></i>
-             </button>
-             <div class="menu-item" >
-                <i class="fa-solid fa-house"></i>
-                <span>Add Task</span>
-             </div>
-             <div class="menu-item" ">
-                <i class="fa-solid fa-chart-simple"></i>
-                <span>Task Count</span>
-             </div>
-              <div class="menu-item" ">
-                <i class="fa-solid fa-filter"></i>
-                <span>Filter Tasks</span>
-             </div>
-              <div class="menu-item" ">
-                <i class="fa-solid fa-trash-can"></i>
-                <span>Clear Completed</span>
-             </div>
-            </nav>
+              
+            </button>
 
-            <div class="card">
-                <i class="fa-solid fa-seedling plant"></i>
-                <p>Small steps</p>
-                <p>make big progress</p>
-                <i class="fa-solid fa-heart heart"></i>
+            <div class="menu-item">
+              <i class="fa-solid fa-house"></i>
+              <span>Add Task</span>
             </div>
+
+            <div class="menu-item">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span>Task Count</span>
+            </div>
+
+            <div class="menu-item">
+              <i class="fa-solid fa-filter"></i>
+              <span>Filter Tasks</span>
+            </div>
+
+            <div class="menu-item">
+              <i class="fa-solid fa-trash-can"></i>
+              <span>Clear Completed</span>
+            </div>
+          </nav>
+
+          <div class="card">
+            <i class="fa-solid fa-seedling plant"></i>
+            <p>Small steps</p>
+            <p>make big progress</p>
+            <i class="fa-solid fa-heart heart"></i>
+          </div>
         </section>
+      </section>
+
+      <section class="main-content-Container">
+        <div class="desktopHeaderContainer">
+          <div class="noteContiner">
+            <h1>Good to see you,<span id="username">!</span></h1>
+            <p>keep going,you're doing great!</p>
+          </div>
+
+          <div class="DarkandNightMoodContainer">
+            <button id="lightmood">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <button id="darkmood">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button id="userfirstletter">t</button>
+          </div>
+        </div>
 
         <section class="AlltaskContainer">
+          <div class="addTaskContainer">
+            <input
+              type="text"
+              placeholder="e.g Study JavaScript"
+              class="input"
+            />
+            <button id="addbtn">+ Add</button>
+          </div>
 
-            <div class="addTaskContainer">
-                <input type="text" placeholder="e.g Study JavaScript" class="input">
-                <button id="addbtn">+ Add</button>
+          <div class="taskConterContainer">
+            <div id="taskSummary">
+              <div>
+                <span id="taskSummaryIcon">
+                  <i class="fa-solid fa-chart-simple"></i>
+                </span>
+              </div>
+              <div>
+                <h2>Task Summary</h2>
+                <p>Track your progress at a glance!</p>
+              </div>
             </div>
 
-            <div class="taskConterContainer">
-                <div id="taskSummary">
-                    <div>
-                       <span id="taskSummaryIcon"><i class="fa-solid fa-chart-simple"></i></span> 
-                    </div>
-                    <div>
-                        <h2>Task Summary</h2>
-                        <p>Track your progress at a glance!</p>
-                    </div>
-                </div>
-                
-                <div class="taskCounterContainer2">
+            <div class="taskCounterContainer2">
+              <div class="TotalContainer">
+                <span>
+                  <i class="fa-solid fa-list-ul"></i>
+                </span>
+                <p>Total <span>Tasks</span></p>
+                <p id="totalcount">8</p>
+              </div>
 
-                      <div class="TotalContainer">
-                          <span><i class="fa-solid fa-list-ul"></i></span>
-                          <p>Total <span>Tasks</span> </p>
-                          <p id="totalcount">8</p>
-                      </div>
-                
-                      <div class="completedContainer">
-                           <span><i class="fa-solid fa-check"></i></span>
-                           <p>Completed <span>Tasks</span> </p>
-                           <p id="completedcount">6</p>
-                      </div>
+              <div class="completedContainer">
+                <span>
+                  <i class="fa-solid fa-check"></i>
+                </span>
+                <p>Completed <span>Tasks</span></p>
+                <p id="completedcount">6</p>
+              </div>
 
-                      <div class="RemainingContainer">
-                          <span><i class="fa-regular fa-clock"></i></span>
-                           <p>Remaining <span>Tasks</span></p>
-                           <p id="remainingcount">1</p>
-                      </div>
-               </div>
+              <div class="RemainingContainer">
+                <span>
+                  <i class="fa-regular fa-clock"></i>
+                </span>
+                <p>Remaining <span>Tasks</span></p>
+                <p id="remainingcount">1</p>
+              </div>
             </div>
 
             <div class="FilterTaskContainer">
-                <div class="filterTask">
-                    <div>
-                        <span id="Filtericon"><i class="fa-solid fa-filter"></i></span>
-                    </div>
-                    <div id="filterNoteContainer">
-                         <h2>Filter Tasks</h2>
-                         <p>Choose a filter to view your tasks.</p>
-                    </div>
-                   
-                </div>
-                <div id="filtertasksContainer">
-                    <div id="Filterall">
-                        <span><i class="fa-solid fa-list-ul"></i></span>
-                        <h3>All <span id="alltask">Tasks</span></h3>
-                    </div>
-                    <div id="FilterCompleted">
-                      <span><i class="fa-solid fa-check"></i></span>
-                      <h3>Completed</h3>
-                    </div>
-                    <div id="FilterRemaining">
-                       <span><i class="fa-regular fa-clock"></i></span>
-                       <h3>pending</h3>
-                    </div>
-                    
-                </div>
-                <div id="FilterTrash">
-                    <span> <i class="fa-solid fa-trash-can"></i></span>
-                    <h3>clear Completed</h3>
+              <div class="filterTask">
+                <div>
+                  <span id="Filtericon">
+                    <i class="fa-solid fa-filter"></i>
+                  </span>
                 </div>
 
+                <div id="filterNoteContainer">
+                  <h2>Filter Tasks</h2>
+                  <p>Choose a filter to view your tasks.</p>
+                </div>
+              </div>
+
+              <div id="filtertasksContainer">
+                <div id="Filterall">
+                  <span>
+                    <i class="fa-solid fa-list-ul"></i>
+                  </span>
+                  <h3>All <span id="alltask">Tasks</span></h3>
+                </div>
+
+                <div id="FilterCompleted">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <h3>Completed</h3>
+                </div>
+
+                <div id="FilterRemaining">
+                  <span>
+                    <i class="fa-regular fa-clock"></i>
+                  </span>
+                  <h3>pending</h3>
+                </div>
+              </div>
+
+              <div id="FilterTrash">
+                <span>
+                  <i class="fa-solid fa-trash-can"></i>
+                </span>
+                <h3>clear Completed</h3>
+              </div>
             </div>
+          </div>
         </section>
 
         <section class="TaskContainer">
-         <div id="taskSetContainer">
+          <div id="taskSetContainer"></div>
 
-         </div>
-         <div id="noTaskNote">
-             <div class="image">
-                <img src="./images/clipboard.jpg" alt="">
+          <div id="noTaskNote">
+            <div class="image">
+              <img src="./images/clipboard.jpg" alt="" />
             </div>
+
             <div id="notaskmessage">
-               <h2>No tasks yet!</h2>
-               <p>Add your first task to get started.</p> 
+              <h2>No tasks yet!</h2>
+              <p>Add your first task to get started.</p>
             </div>
-             
-         </div>
+          </div>
         </section>
 
         <section class="MobileFooter">
-            <div id="mobileFooterContainer">
-                <div id="mobileHome">
-                   <span><i class="fa-solid fa-house"></i></span>
-                   <p>Home</p>
-                </div>
-                <div id="mobileStat">
-                    <span><i class="fa-solid fa-chart-simple"></i></span>
-                    <p>Stats</p>
-                </div>
-                <div id="mobileFilter">
-                    <span><i class="fa-solid fa-filter"></i></span>
-                    <p>Filter</p>
-                </div>
-                <div id="mobileClear">
-                    <span><i class="fa-solid fa-trash-can"></i></span>
-                    <p>Clear</p>
-                </div>
+          <div id="mobileFooterContainer">
+            <div id="mobileHome">
+              <span>
+                <i class="fa-solid fa-house"></i>
+              </span>
+              <p>Home</p>
             </div>
-        </section>
+            <div id="mobileStat">
+              <span>
+                <i class="fa-solid fa-chart-simple"></i>
+              </span>
+              <p>Stats</p>
+            </div>
 
+            <div id="mobileFilter">
+              <span>
+                <i class="fa-solid fa-filter"></i>
+              </span>
+              <p>Filter</p>
+            </div>
+
+            <div id="mobileClear">
+              <span>
+                <i class="fa-solid fa-trash-can"></i>
+              </span>
+              <p>Clear</p>
+            </div>
+          </div>
+        </section>
+      </section>
     </div>
-</body>
+  </body>
 </html>

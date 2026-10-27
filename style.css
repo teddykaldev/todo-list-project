@@ -9,13 +9,16 @@ body{
 }
 
 .projectContainer{
- margin: 0;
- width: 100%;
- min-height: 100vh;
- background-color: #00050d;
- color: white;
- font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00050d;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
 }
 .mobileandDesktopHeader{
     margin: 0;
@@ -40,7 +43,7 @@ body{
 }
 #todoContainer h1{
     margin-top: 0;
-    margin-bottom: clamp(22px,6vw,30px);
+    margin-bottom: clamp(2px,6vw,1px);
     font-weight: 500;
     white-space: nowrap;
 }
@@ -52,7 +55,7 @@ body{
     line-height: 1.6;
     white-space: nowrap;
 }
-#plus{
+.plus{
     font-size: 12px;
     padding: 0 3px;
 }
@@ -62,23 +65,23 @@ body{
 }
 #checkMark{
     width: 55px;
-  height: 55px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #2875ff, #5145ff, #762bff);
-  box-shadow: 0 0 15px rgba(50, 90, 255, 0.4);
-  position: relative
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2875ff, #5145ff, #762bff);
+    box-shadow: 0 0 15px rgba(50, 90, 255, 0.4);
+    position: relative
 }
 #checkMark i{
-      font-size: 35px;
-  color: white;
-  background: #050914;
-  border-radius: 80%;
-  padding: 5px;
-  text-shadow: 0 0 5px white;
+    font-size: 35px;
+    color: white;
+    background: #050914;
+    border-radius: 80%;
+    padding: 5px;
+    text-shadow: 0 0 5px white;
 }
 #mobilemenu{
     background-color: #0047ab;
@@ -100,9 +103,9 @@ body{
     margin: 0;
 }
 .noteContiner h1{
-     margin-top: 5px;
-     margin-bottom: 0;
-      font-size: clamp(23px,6vw,30px);
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: clamp(23px,6vw,30px);
     font-weight: 500;
 }
 .noteContiner p{
@@ -247,7 +250,6 @@ display: none;
 }
 .RemainingContainer{
     display: flex;
-  
     flex: 1 1 0;
     min-width: 0;
     flex-direction: column;
@@ -258,39 +260,68 @@ display: none;
     border-radius:16px ;
     text-align: center;
 }
+.TotalContainer p,
+.completedContainer p,
+.RemainingContainer p{
+    max-width: 100%;
+    margin: 5px 0;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+#totalcount,
+#completedcount,
+#remainingcount{
+font-size: 18px;
+font-weight: 600;
+}
+
 .FilterTaskContainer{
+    width: 100%;
+    min-width: 0;
     background-color: #030b1c;
     border: 1px solid #164e91;
-    padding: 16px;
+    padding: 12px;
     border-radius: 12px;
     margin-top: 10px;
 }
 #Filtericon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #4f46e5;
-    padding: 12px 12px;
+    padding: 12px;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 .filterTask{
     display: flex;
     align-items: center;
     gap: 20px;
+    min-width: 0;
+}
+#filterNoteContainer{
+    min-width: 0;
 }
 #filterNoteContainer h2{
-    margin-top: 15px;
-    margin-bottom: 0;
-    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size:clamp(21px,5.5vh,30px);
     font-weight: 500;
 }
 #filterNoteContainer p{
     margin-top: 0;
+    margin-bottom: 0;
     color: #b8c7e8;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 12px;
+    line-height: 1.5;
 }
 #filtertasksContainer{
+    width: 100%;
+    min-width: 0;
      display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 15px;
 }
 #alltask{
     display: none;
@@ -307,52 +338,85 @@ display: none;
 }
 #FilterCompleted{
     display: flex;
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 5px;
     background-color: #082654;
      border:1px solid #164e91 ;
-    padding: 5px 10px;
+    padding: 10px 4px;
     border-radius: 12px;
 }
 #FilterRemaining{
     display: flex;
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 5px;
     background-color: #082654;
      border:1px solid #164e91 ;
-    padding: 5px 10px;
+    padding: 10px 4px;
     border-radius: 12px; 
 }
+#Filterall h3,
+#FilterCompleted h3,
+#FilterRemaining h3{
+    min-width: 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
 #FilterTrash{
+    width: 100%;
+    min-width: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    gap:8px;
     background-color: #e11d48;
     border:none;
     border-radius: 12px;
     margin: 10px 0 0 0;
+    padding: 12px;
+}
+#FilterTrash h3{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
 }
 .TaskContainer{
+    width: calc(100%-20px);
+    min-width: 0;
+    min-height: 220px;
+    margin: 10px 10px 0;
     background-color: #000000;
     border-radius:12px ;
     border:1px solid #164e91 ;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    padding: 15px 10px;
+   
+}
+#taskSetContainer{
+    width: 100%;
+    min-width: 0;
 }
 .image >img{
-   max-width: 100%;
+    width: 100px;
     height: 100px;
+    object-fit: contain;
 }
 .image{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #notaskmessage{
     margin: 0;
@@ -360,66 +424,149 @@ display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 #notaskmessage h2{
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+#notaskmessage p{
+margin-top: 0;
+font-size: 12px;
+color: #b8c7e8;
 }
 .MobileFooter{
+    width: 100%;
     margin: 0;
+    margin-top: 10px;
     background-color:#001a3a; ;
     border-radius: 0 0 25px 25px;
 }
 #mobileFooterContainer{
+    width: 100%;
     margin: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5px;
-    
+    gap:5px;
+    padding:10px 5px;   
 }
 #mobileFooterContainer div{
-    margin-top: 10px;
+    flex: 1;
+    min-width: 0;
+    margin-top: 0;
+    text-align:center;
 }
-#mobileHome span{
-    margin-bottom: 0;
-    display:flex ;
-    justify-content: center;
-    
-}
-#mobileHome p{
-    margin-top: 8px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-#mobileStat span{
-    margin-bottom: 0;
-    display:flex ;
-    justify-content: center;
-    
-}
-#mobileStat p{
-    margin-top: 8px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-#mobileFilter span{
-    margin-bottom: 0;
-    display:flex ;
-    justify-content: center;
-}
-#mobileFilter p{
-    margin-top: 8px;
-    font-size: 14px;
-    line-height: 1.6;
-}
+#mobileHome span,
+#mobileStat span,
+#mobileFilter span,
 #mobileClear span{
     margin-bottom: 0;
-    display:flex ;
-    justify-content: center
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+#mobileHome p,
+#mobileStat p,
+#mobileFilter p,
 #mobileClear p{
     margin-top: 8px;
+    margin-bottom: 0;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.4;
+}
+
+
+
+@media(min-width:768px){
+.DarkandNightMoodContainer{
+    display: block;
+}
+.sidenavs{
+    display: block;
+}
+.TotalContainer span,
+.completedContainer span,
+.RemainingContainer span{
+    display: block;
+}
+#alltask{
+    display: block;
+}
+#closebtn{
+    display: none;
+}
+.MobileFooter{
+    display: none;
+}
+#mobilemenu{
+    display: none;
+}
+
+.line{
+    width: 10px;
+    height: 300px;
+    background: linear-gradient(
+        to botttom,
+        red
+    );
+    border-radius: 5px;
+}
+.projectContainer{
+    display: flex;
+    border-radius: 1px solid #164e91 ;
+}
+.Side-bar-Container{
+    width: 100%;
+    max-width: 320px;
+    background-color: #00050d;
+    border-right: 2px solid #164e91;
+  
+   
+}
+.main-content-Container{
+    flex: 1;
+}
+#mobileHeader{
+    margin: 0;
+    background-color: #00050d;
+}
+.mobileandDesktopHeader{
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    
+}
+.sidemenu{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 15px 2px 20px 20px;
+}
+
+
+.menu-item{
+    /* background-color: #3015e8; */
+    display: flex;
+    align-items: center;
+    gap:20px;
+    /* padding: 10px;
+    border-radius: 12px;
+    margin-right: 20px; */
+
+}
+.menu-item i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#164e91;
+    /* padding: 20px; */
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-radius: 12px;
+    
+}
 }
