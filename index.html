@@ -38,8 +38,7 @@
         <section class="sidenavs">
           <nav id="mobileMenu" class="sidemenu">
             <button id="closebtn" aria-label="close button">
-                <i class="fa-solid fa-xmark"></i>
-              
+              <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div class="menu-item">
@@ -64,10 +63,10 @@
           </nav>
 
           <div class="card">
-            <i class="fa-solid fa-seedling plant"></i>
+            <p id="plant-icon"><i class="fa-solid fa-seedling plant"></i></p>
             <p>Small steps</p>
             <p>make big progress</p>
-            <i class="fa-solid fa-heart heart"></i>
+            <p id="heart-icon"><i class="fa-solid fa-heart heart"></i></p>
           </div>
         </section>
       </section>
@@ -87,8 +86,6 @@
             <button id="darkmood">
               <i class="fa-solid fa-moon"></i>
             </button>
-
-            <button id="userfirstletter">t</button>
           </div>
         </div>
 
@@ -103,41 +100,55 @@
           </div>
 
           <div class="taskConterContainer">
-            <div id="taskSummary">
-              <div>
-                <span id="taskSummaryIcon">
-                  <i class="fa-solid fa-chart-simple"></i>
-                </span>
-              </div>
-              <div>
-                <h2>Task Summary</h2>
-                <p>Track your progress at a glance!</p>
-              </div>
-            </div>
-
-            <div class="taskCounterContainer2">
-              <div class="TotalContainer">
-                <span>
-                  <i class="fa-solid fa-list-ul"></i>
-                </span>
-                <p>Total <span>Tasks</span></p>
-                <p id="totalcount">8</p>
+            <div class="TaskSummary-Container">
+              <div id="taskSummary">
+                <div>
+                  <span id="taskSummaryIcon">
+                    <i class="fa-solid fa-chart-simple"></i>
+                  </span>
+                </div>
+                <div>
+                  <h2>Task Summary</h2>
+                  <p>Track your progress at a glance!</p>
+                </div>
               </div>
 
-              <div class="completedContainer">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-                <p>Completed <span>Tasks</span></p>
-                <p id="completedcount">6</p>
-              </div>
+              <div class="taskCounterContainer2">
+                <div id="TotalContainer">
+                  <div id="TaskList">
+                    <span>
+                      <i class="fa-solid fa-list-ul"></i>
+                    </span>
+                  </div>
+                  <div class="TaskSummary-notes">
+                    <p>Total <span>Tasks</span></p>
+                    <p id="totalcount">8</p>
+                  </div>
+                </div>
 
-              <div class="RemainingContainer">
-                <span>
-                  <i class="fa-regular fa-clock"></i>
-                </span>
-                <p>Remaining <span>Tasks</span></p>
-                <p id="remainingcount">1</p>
+                <div id="completedContainer">
+                  <div id="TaskCheck">
+                    <span>
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                  </div>
+                  <div class="TaskSummary-notes">
+                    <p>Completed <span>Tasks</span></p>
+                    <p id="completedcount">6</p>
+                  </div>
+                </div>
+
+                <div id="RemainingContainer">
+                  <div id="TaskClock">
+                    <span>
+                      <i class="fa-regular fa-clock"></i>
+                    </span>
+                  </div>
+                  <div class="TaskSummary-notes">
+                    <p>Remaining <span>Tasks</span></p>
+                    <p id="remainingcount">1</p>
+                  </div>
+                </div>
               </div>
             </div>
 
