@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./Icons/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -25,7 +26,7 @@
               <p>
                 Plan <span class="plus">+</span> Organize
                 <span class="plus">+</span>
-                Be Productive
+                Productive
               </p>
             </div>
           </div>
@@ -95,6 +96,7 @@
               type="text"
               placeholder="e.g Study JavaScript"
               class="input"
+              id="input"
             />
             <button id="addbtn">+ Add</button>
           </div>
@@ -122,7 +124,7 @@
                   </div>
                   <div class="TaskSummary-notes">
                     <p>Total <span>Tasks</span></p>
-                    <p id="totalcount">8</p>
+                    <p id="totalcount"></p>
                   </div>
                 </div>
 
@@ -134,7 +136,7 @@
                   </div>
                   <div class="TaskSummary-notes">
                     <p>Completed <span>Tasks</span></p>
-                    <p id="completedcount">6</p>
+                    <p id="completedcount"></p>
                   </div>
                 </div>
 
@@ -146,7 +148,7 @@
                   </div>
                   <div class="TaskSummary-notes">
                     <p>Remaining <span>Tasks</span></p>
-                    <p id="remainingcount">1</p>
+                    <p id="remainingcount"></p>
                   </div>
                 </div>
               </div>
@@ -200,7 +202,9 @@
         </section>
 
         <section class="TaskContainer">
-          <div id="taskSetContainer"></div>
+          <div id="taskSetContainer">
+            <ul id="Task-list"></ul>
+          </div>
 
           <div id="noTaskNote">
             <div class="image">
